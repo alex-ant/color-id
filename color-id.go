@@ -107,6 +107,6 @@ func (s *Set) GetColor(id string) Color {
 }
 
 func randomPoint() float32 {
-	rand.Seed(time.Now().Unix())
+	rand.Seed(time.Now().UnixNano())
 	return float32(rand.Intn(1000)) / 1000
 }

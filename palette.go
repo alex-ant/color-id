@@ -15,11 +15,13 @@ type Color struct {
 }
 
 func getHex(i uint8) string {
-	if i == 0 {
-		return "00"
+	s := fmt.Sprintf("%X", i)
+
+	if len(s) == 1 {
+		s = "0" + s
 	}
 
-	return fmt.Sprintf("%X", i)
+	return s
 }
 
 // Hex returns a hexadecimal representation of color.
